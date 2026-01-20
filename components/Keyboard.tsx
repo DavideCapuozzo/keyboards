@@ -366,25 +366,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-f-${i}`} position={[x, -0.002, -0.106]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -401,25 +401,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-n-${i}`} position={[x, -0.002, -0.087]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -436,25 +436,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-t-${i}`} position={[x, -0.002, -0.068]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -471,25 +471,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-h-${i}`} position={[x, -0.002, -0.049]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -506,25 +506,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-b-${i}`} position={[x, 0.0, -0.03]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -545,25 +545,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-m-${i}`} position={[x, -0.002, z]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -582,25 +582,25 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
               <group key={`switch-a-${i}`} position={[x, -0.002, z]}>
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002.geometry}
                   material={switchMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_1.geometry}
                   material={switchContactsMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_2.geometry}
                   material={switchStemMat}
                 />
                 <mesh
                   castShadow
-                  receiveShadow
+                  receiveShadow={false}
                   geometry={nodes.Switch_Heavy002_3.geometry}
                   material={switchMat}
                 />
@@ -619,13 +619,13 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
           <group position={[-0.022, -0.014, -0.057]}>
             <mesh
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.Cube005.geometry}
               material={placeholderMat}
             />
             <mesh
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.Cube005_1.geometry}
               material={placeholderMat}
             />
@@ -661,7 +661,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.esc}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_ESC.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -669,7 +669,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f1}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F1.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -677,7 +677,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f2}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F2.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -685,7 +685,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f3}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F3.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -693,7 +693,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f4}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F4.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -701,7 +701,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f5}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F5.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -709,7 +709,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f6}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F6.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -717,7 +717,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f7}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F7.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -725,7 +725,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f8}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F8.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -733,7 +733,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f9}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F9.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -741,7 +741,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f10}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F10.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -749,7 +749,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f11}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F11.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -757,7 +757,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f12}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F12.geometry}
               material={placeholderMat}
               position={[-0.051, 0.01, -0.106]}
@@ -765,7 +765,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.del}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_DEL.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -777,7 +777,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.grave}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_GRAVE.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -785,7 +785,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.one}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_1.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -793,7 +793,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.two}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_2.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -801,7 +801,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.three}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_3.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -809,7 +809,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.four}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_4.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -817,7 +817,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.five}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_5.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -825,7 +825,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.six}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_6.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -833,7 +833,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.seven}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_7.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -841,7 +841,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.eight}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_8.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -849,7 +849,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.nine}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_9.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -857,7 +857,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.zero}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_0.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -865,7 +865,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.dash}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_DASH.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -873,7 +873,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.equal}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_EQUAL.geometry}
               material={placeholderMat}
               position={[-0.165, 0.01, -0.087]}
@@ -881,7 +881,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.backspace}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_BACKSPACE.geometry}
               material={placeholderMat}
               position={[0.092, 0, -0.087]}
@@ -893,7 +893,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.tab}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_TAB.geometry}
               material={placeholderMat}
               position={[-0.16, 0.008, -0.068]}
@@ -901,7 +901,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.q}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_Q.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -909,7 +909,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.w}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_W.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -917,7 +917,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.e}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_E.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -925,7 +925,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.r}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_R.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -933,7 +933,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.t}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_T.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -941,7 +941,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.y}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_Y.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -949,7 +949,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.u}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_U.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -957,7 +957,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.i}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_I.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -965,7 +965,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.o}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_O.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -973,7 +973,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.p}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_P.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -981,7 +981,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.lsquarebracket}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_LSQUAREBRACKET.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -989,7 +989,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.rsquarebracket}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_RSQUAREBRACKET.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -997,7 +997,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.backslash}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_BACKSLASH.geometry}
               material={placeholderMat}
               position={[-0.16, 0.008, -0.068]}
@@ -1005,7 +1005,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.pageup}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_PAGEUP.geometry}
               material={placeholderMat}
               position={[-0.136, 0.008, -0.068]}
@@ -1017,7 +1017,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.caps}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_CAPS.geometry}
               material={placeholderMat}
               position={[-0.158, 0, -0.049]}
@@ -1025,7 +1025,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.a}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_A.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1033,7 +1033,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.s}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_S.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1041,7 +1041,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.d}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_D.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1049,7 +1049,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.f}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_F.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1057,7 +1057,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.g}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_G.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1065,7 +1065,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.h}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_H.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1073,7 +1073,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.j}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_J.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1081,7 +1081,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.k}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_K.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1089,7 +1089,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.l}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_L.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1097,7 +1097,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.semicolon}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_SEMICOLON.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1105,7 +1105,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.quote}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_QUOTE.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1113,7 +1113,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.enter}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_ENTER.geometry}
               material={placeholderMat}
               position={[0.09, 0, -0.049]}
@@ -1121,7 +1121,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.pagedown}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_PAGEDOWN.geometry}
               material={placeholderMat}
               position={[-0.132, 0.007, -0.049]}
@@ -1133,7 +1133,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.lshift}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_LSHIFT.geometry}
               material={placeholderMat}
               position={[-0.153, 0, -0.03]}
@@ -1141,7 +1141,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.z}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_Z.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1149,7 +1149,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.x}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_X.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1157,7 +1157,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.c}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_C.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1165,7 +1165,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.v}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_V.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1173,7 +1173,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.b}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_B.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1181,7 +1181,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.n}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_N.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1189,7 +1189,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.m}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_M.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1197,7 +1197,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.comma}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_COMMA.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1205,7 +1205,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.period}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_PERIOD.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1213,7 +1213,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.slash}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_SLASH.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1221,7 +1221,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.rshift}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_RSHIFT.geometry}
               material={placeholderMat}
               position={[0.076, 0, -0.03]}
@@ -1229,7 +1229,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.arrowup}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_ARROWUP.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1237,7 +1237,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.end}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_END.geometry}
               material={placeholderMat}
               position={[-0.122, 0.008, -0.03]}
@@ -1249,7 +1249,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.lcontrol}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_LCONTROL.geometry}
               material={placeholderMat}
               position={[-0.162, 0.008, -0.011]}
@@ -1257,7 +1257,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.lwin}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_LWIN.geometry}
               material={placeholderMat}
               position={[-0.162, 0.008, -0.011]}
@@ -1265,7 +1265,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.lalt}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_LALT.geometry}
               material={placeholderMat}
               position={[-0.162, 0.008, -0.011]}
@@ -1273,7 +1273,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.space}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_SPACE.geometry}
               material={placeholderMat}
               position={[-0.043, 0, -0.01]}
@@ -1281,7 +1281,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.ralt}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_RALT.geometry}
               material={placeholderMat}
               position={[-0.162, 0.008, -0.011]}
@@ -1289,7 +1289,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.fn}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_FN.geometry}
               material={placeholderMat}
               position={[-0.162, 0.008, -0.011]}
@@ -1301,7 +1301,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.arrowleft}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_ARROWLEFT.geometry}
               material={placeholderMat}
               position={[0.083, 0.008, -0.011]}
@@ -1309,7 +1309,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.arrowdown}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_ARROWDOWN.geometry}
               material={placeholderMat}
               position={[0.083, 0.008, -0.011]}
@@ -1317,7 +1317,7 @@ export const Keyboard = forwardRef<KeyboardRefs, KeyboardProps>(
             <mesh
               ref={keyRefs.arrowright}
               castShadow
-              receiveShadow
+              receiveShadow={false}
               geometry={nodes.K_ARROWRIGHT.geometry}
               material={placeholderMat}
               position={[0.083, 0.008, -0.011]}

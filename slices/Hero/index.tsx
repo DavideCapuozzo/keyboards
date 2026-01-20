@@ -7,6 +7,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "./Scene";
+import * as THREE from "three";
 
 
 /**
@@ -23,7 +24,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
       <div className="hero-scene sticky pointer-events-none top-0 h-dvh w-full">
 
-        <Canvas>
+        <Canvas shadows="soft">
           <Scene />
         </Canvas>
         
