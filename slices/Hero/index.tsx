@@ -11,8 +11,9 @@ import * as THREE from "three";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(useGSAP, SplitText);
+gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
 
 
 /**
@@ -42,6 +43,18 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         duration: 0.6,
         ease: "power2.out",
       })
+      gsap.fromTo(".hero-scene", {
+        background: "linear-gradient(to bottom, #000000, #0f172a, #062f4a, #7fa0b9)",
+        
+      },{
+        background: "linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff)",
+        scrollTrigger: {
+          trigger:".hero",
+          start: "top top",
+          end: "40% bottom",
+          scrub: 1,
+        }
+      })
     })
     mm.add("(prefers-reduced-motion: reduce )", () => {
       gsap.set(".hero-heanding, .hero-body", { opacity: 1 });
@@ -50,7 +63,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
 
   return (
-    <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} className="text-white relative h-dvh text-shadow-black/30 text-shadow-lg blue-gradient-bg">
+    <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} className="hero text-white relative h-dvh text-shadow-black/30 text-shadow-lg blue-gradient-bg motion-safe:h-[300vh]">
 
       <div className="hero-scene sticky pointer-events-none top-0 h-dvh w-full">
 
