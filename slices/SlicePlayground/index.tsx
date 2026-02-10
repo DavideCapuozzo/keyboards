@@ -8,8 +8,10 @@ import { PrismicRichText } from "@prismicio/react";
 import { FadeIn } from "@/components/FadeIn";
 import clsx from "clsx";
 import { Canvas } from "@react-three/fiber";
-import { Switch } from "@/components/Switch";
+import { SOUND_MAP, Switch } from "@/components/Switch";
 import { Stage } from "@react-three/drei";
+import { gsap } from "gsap/gsap-core";
+import { LuVolume2 } from "react-icons/lu"
 
 /**
  * Props for `SlicePlayground`.
@@ -69,9 +71,28 @@ const SharedCanvas: FC<SharedCanvasProps> = ({ color }: SharedCanvasProps) => {
     black: "bg-gray-900",
   }[colorName]
 
+  const handleSound = () => {
+    const selectedSound = gsap.utils.random(SOUND_MAP[colorName]);
+    const audio = new Audio(selectedSound);
+    audio.volume = 0.6;
+    audio.play();
+  }
+
+
+
   return (
     <div className="group relative min-h-96 overflow-hidden rounded-3xl select-none">
       {/* Text Button */}
+
+      <button 
+        onClick={handleSound}
+        className="font-bold-slanted absolute bottom-0 left-0 z-10 flex items-center gap-3 p-6 text-4xl text-white uppercase focus:ring-2 focus:ring-white focus:outline-none ">
+        {name}<LuVolume2 />
+      </button>
+
+
+
+
       {/* Canvas */}
 
       <Canvas camera={{position:[1.5, 2, 0], fov:7}}>
