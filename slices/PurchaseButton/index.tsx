@@ -1,7 +1,7 @@
 "use client"
 
 
-import { FC, useState } from "react";
+import React, { FC, useRef, useState } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
@@ -9,6 +9,10 @@ import { PrismicText, PrismicRichText } from "@prismicio/react";
 import { FadeIn } from "@/components/FadeIn";
 import clsx from "clsx";
 import { LuChevronRight, LuLoader } from "react-icons/lu";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP)
 
 
 export type PurchaseButtonProps =
@@ -16,7 +20,8 @@ export type PurchaseButtonProps =
 
 
 const PurchaseButton: FC<PurchaseButtonProps> = ({ slice }) => {
-
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null)
   const [isPressed, setIsPressed] = useState(false);
 
   const handlePurchaseClick = async () => {
@@ -24,7 +29,53 @@ const PurchaseButton: FC<PurchaseButtonProps> = ({ slice }) => {
     // TODO: add checkout logic later
     await new Promise(resolve => setTimeout(resolve, 2000))
     setIsPressed(false)
-  }
+  };
+
+  useGSAP(() => {
+    const handleMouseMove = (event:MouseEvent) => {
+    if(!buttonRef.current || !textRef.current) return;
+      const buttonRect = buttonRef.current.getBoundingClientRect();
+      const mouseX = event.clientX - buttonRect.left;
+      const buttonWidth = buttonRect.width;
+      const normalizedX = Math.max(0, Math.min(1, mouseX / buttonWidth))
+      const newWdth = 100 - normalizedX * 50;
+      const newWght = 700 + normalizedX * 70;
+
+      gsap.to(textRef.current, {
+        "--wdth": newWdth,
+        "--wgth": newWght,
+        duration: 0.3,
+        ease: "power2.out"
+      })
+    }
+
+    const handleMouseLeave = () => {
+      if(!textRef.current) return
+      gsap.to(textRef.current, {
+        "--wdth": 85,
+        "--wgth": 850,
+        duration: 0.5,
+        ease: "power2.out"
+      })
+    }
+
+    buttonRef.current?.addEventListener("mousemove", handleMouseMove)
+    buttonRef.current?.addEventListener("mouseleave", handleMouseLeave)
+
+
+    gsap.set(textRef.current, {
+      "--wdth" : 85,
+      "--wght" : 850,
+    })
+
+    return () => {
+      if(buttonRef.current){
+        buttonRef.current?.removeEventListener("mousemove", handleMouseMove)
+        buttonRef.current?.removeEventListener("mouseleave", handleMouseLeave)
+      }
+    }
+
+  })
 
   return (
     <Bounded
@@ -41,16 +92,17 @@ const PurchaseButton: FC<PurchaseButtonProps> = ({ slice }) => {
         </h2>
 
         <button
-
+          ref={buttonRef}
           onClick={handlePurchaseClick}
           disabled={isPressed}
 
           className={clsx("group relative w-full overflow-hidden rounded-full border-8 border-gray-900 bg-linear-to-r/oklch from-sky-300 to-sky-600 px-6 py-6 ease-out focus:ring-24 focus:ring-sky-500/50 focus:outline-none motion-safe:transition-all motion-safe:duration-300 md:border-12 md:px-20 md:py-16", "hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/40", "active:scale-95", isPressed ? "scale-95 cusrsor-not-allowed opacity-80" : "cursor-pointer")}>
           <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/40 to-transparent ease-out group-hover:translate-x-full motion-safe:transition-transform motion-safe:duration-1000" />
           <div className="relativ z-10 flex items-center justify-center gap-6 md:gap-8 ">
-            <span className="font-black-slanted text-4xl tracking-wide text-gray-900 uppercase group-hover:translate-y-1 motion-safe:transition-transform motion-safe:duration-300 md:text-7xl lg:text-9xl">
+            <span ref={textRef} style={{"--wdth": 85, "--wght":850} as React.CSSProperties} className="font-black-slanted text-4xl tracking-wide text-gray-900 uppercase group-hover:translate-y-1 motion-safe:transition-transform motion-safe:duration-300 md:text-7xl lg:text-9xl">
               { isPressed? (
-                <span className="flex items-center gap-4 md:gap-6">
+                <span 
+                  className="flex items-center gap-4 md:gap-6">
                   <LuLoader className="size-12 animate-spin text-gray-900 md:size-16" />
                   Loading...
                 </span>
