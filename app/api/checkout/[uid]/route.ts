@@ -1,9 +1,11 @@
 import Stripe from "stripe";
 import { NextRequest, NextResponse } from "next/server";
+import { asText } from "@prismicio/client";
+import { createClient } from "@/prismicio";
 
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: "2026-03-23.basil"
+    apiVersion: "2025-07-30.basil"
 })
 
 export async function POST(
