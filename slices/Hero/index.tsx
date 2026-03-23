@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, Suspense, useEffect, useState } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { PrismicRichText } from "@prismicio/react";
@@ -12,8 +12,33 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Loader } from "@/components/Loader";
+import { useProgress } from "@react-three/drei";
+import clsx from "clsx";
 
 gsap.registerPlugin(useGSAP, SplitText, ScrollTrigger);
+
+function LoaderWrapper(){
+  const {active} = useProgress()
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    if(active){
+      setIsLoading(true)
+    } else{
+      const timer = setTimeout(() => setIsLoading(false), 200);
+      return ()=> clearTimeout(timer)
+    }
+  }, [active])
+
+  return(
+    <div className={clsx("motion-safe:transation-opacity motion-safe:duration-700", isLoading? "opacity-100" : "opacity-0 pointer-events-none")}>
+      <Loader/>
+    </div>
+  )
+
+}
 
 
 /**
@@ -68,10 +93,12 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className="hero-scene sticky pointer-events-none top-0 h-dvh w-full">
 
         <Canvas shadows="soft">
-          <Scene />
+          <Suspense fallback={null}>
+            <Scene />
+          </Suspense>
         </Canvas>
-
       </div>
+      <LoaderWrapper/>
 
       <div className="hero-content absolute inset-x-0 top-0 h-dvh">
 
