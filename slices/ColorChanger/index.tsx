@@ -7,7 +7,6 @@ import { PrismicRichText } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
 import clsx from "clsx";
 import Image from "next/image";
-import { text } from "body-parser";
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "./Scene";
 
