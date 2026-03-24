@@ -368,6 +368,3 @@ npm start
 
 ---
 
-## License
-
-This project is private and not licensed for redistribution.
