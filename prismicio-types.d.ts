@@ -70,6 +70,9 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type HomapageDocumentDataSlicesSlice =
+  | PurchaseButtonSlice
+  | MarqueeSlice
+  | SlicePlaygroundSlice
   | ColorChangerSlice
   | BentoBoxSlice
   | HeroSlice;
@@ -137,7 +140,114 @@ export type HomapageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomapageDocument;
+/**
+ * Content for Product documents
+ */
+interface ProductDocumentData {
+  /**
+   * Name field in *Product*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Price (cents) field in *Product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.price
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  price: prismic.NumberField;
+
+  /**
+   * Image field in *Product*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *Product*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Product document from Prismic
+ *
+ * - **API ID**: `product`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProductDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ProductDocumentData>,
+    "product",
+    Lang
+  >;
+
+/**
+ * Content for Switch documents
+ */
+interface SwitchDocumentData {
+  /**
+   * Name field in *Switch*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: switch.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Hex Color field in *Switch*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: switch.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/color
+   */
+  color: prismic.ColorField;
+}
+
+/**
+ * Switch document from Prismic
+ *
+ * - **API ID**: `switch`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SwitchDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<SwitchDocumentData>, "switch", Lang>;
+
+export type AllDocumentTypes =
+  | HomapageDocument
+  | ProductDocument
+  | SwitchDocument;
 
 /**
  * Item in *BentoBox → Default → Primary → Items*
@@ -346,6 +456,235 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Item in *Marquee → Default → Primary → Phrases*
+ */
+export interface MarqueeSliceDefaultPrimaryPhrasesItem {
+  /**
+   * Text field in *Marquee → Default → Primary → Phrases*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: marquee.default.primary.phrases[].text
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Marquee → Default → Primary*
+ */
+export interface MarqueeSliceDefaultPrimary {
+  /**
+   * Direction field in *Marquee → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: marquee.default.primary.direction
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  direction: prismic.SelectField<"Left" | "Right">;
+
+  /**
+   * Phrases field in *Marquee → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: marquee.default.primary.phrases[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  phrases: prismic.GroupField<Simplify<MarqueeSliceDefaultPrimaryPhrasesItem>>;
+}
+
+/**
+ * Default variation for Marquee Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MarqueeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MarqueeSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Marquee*
+ */
+type MarqueeSliceVariation = MarqueeSliceDefault;
+
+/**
+ * Marquee Shared Slice
+ *
+ * - **API ID**: `marquee`
+ * - **Description**: Marquee
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MarqueeSlice = prismic.SharedSlice<
+  "marquee",
+  MarqueeSliceVariation
+>;
+
+/**
+ * Primary content in *PurchaseButton → Default → Primary*
+ */
+export interface PurchaseButtonSliceDefaultPrimary {
+  /**
+   * Eyebrow field in *PurchaseButton → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: purchase_button.default.primary.eyebrow
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  eyebrow: prismic.KeyTextField;
+
+  /**
+   * Heanding field in *PurchaseButton → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: purchase_button.default.primary.heanding
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heanding: prismic.RichTextField;
+
+  /**
+   * Button Text field in *PurchaseButton → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: purchase_button.default.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Body field in *PurchaseButton → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: purchase_button.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  body: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PurchaseButton Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PurchaseButtonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PurchaseButtonSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PurchaseButton*
+ */
+type PurchaseButtonSliceVariation = PurchaseButtonSliceDefault;
+
+/**
+ * PurchaseButton Shared Slice
+ *
+ * - **API ID**: `purchase_button`
+ * - **Description**: PurchaseButton
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PurchaseButtonSlice = prismic.SharedSlice<
+  "purchase_button",
+  PurchaseButtonSliceVariation
+>;
+
+/**
+ * Item in *SlicePlayground → Default → Primary → Switches*
+ */
+export interface SlicePlaygroundSliceDefaultPrimarySwitchesItem {
+  /**
+   * Switch field in *SlicePlayground → Default → Primary → Switches*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slice_playground.default.primary.switches[].switch
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  switch: ContentRelationshipFieldWithData<
+    [{ id: "switch"; fields: ["name", "color"] }]
+  >;
+}
+
+/**
+ * Primary content in *SlicePlayground → Default → Primary*
+ */
+export interface SlicePlaygroundSliceDefaultPrimary {
+  /**
+   * Heanding field in *SlicePlayground → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slice_playground.default.primary.heanding
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heanding: prismic.RichTextField;
+
+  /**
+   * Description field in *SlicePlayground → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slice_playground.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Switches field in *SlicePlayground → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slice_playground.default.primary.switches[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  switches: prismic.GroupField<
+    Simplify<SlicePlaygroundSliceDefaultPrimarySwitchesItem>
+  >;
+}
+
+/**
+ * Default variation for SlicePlayground Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SlicePlaygroundSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SlicePlaygroundSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SlicePlayground*
+ */
+type SlicePlaygroundSliceVariation = SlicePlaygroundSliceDefault;
+
+/**
+ * SlicePlayground Shared Slice
+ *
+ * - **API ID**: `slice_playground`
+ * - **Description**: SlicePlayground
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SlicePlaygroundSlice = prismic.SharedSlice<
+  "slice_playground",
+  SlicePlaygroundSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -370,6 +709,10 @@ declare module "@prismicio/client" {
       HomapageDocument,
       HomapageDocumentData,
       HomapageDocumentDataSlicesSlice,
+      ProductDocument,
+      ProductDocumentData,
+      SwitchDocument,
+      SwitchDocumentData,
       AllDocumentTypes,
       BentoBoxSlice,
       BentoBoxSliceDefaultPrimaryItemsItem,
@@ -384,6 +727,20 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      MarqueeSlice,
+      MarqueeSliceDefaultPrimaryPhrasesItem,
+      MarqueeSliceDefaultPrimary,
+      MarqueeSliceVariation,
+      MarqueeSliceDefault,
+      PurchaseButtonSlice,
+      PurchaseButtonSliceDefaultPrimary,
+      PurchaseButtonSliceVariation,
+      PurchaseButtonSliceDefault,
+      SlicePlaygroundSlice,
+      SlicePlaygroundSliceDefaultPrimarySwitchesItem,
+      SlicePlaygroundSliceDefaultPrimary,
+      SlicePlaygroundSliceVariation,
+      SlicePlaygroundSliceDefault,
     };
   }
 }

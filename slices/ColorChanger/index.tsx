@@ -68,6 +68,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
 
   function handleTextureSelect(texture: KeycapTexture) {
     if (texture.id == selectedTextureId || isAnimating) return
+    setIsAnimating(true);
     setSelectedTextureId(texture.id);
     setBackgroundTexture(KEYCAP_TEXTURES.find((t)=>t.id == texture.id)?.name || "");
   }
@@ -82,6 +83,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="relative flex h-[90vh] min-h-250 flex-col overflow-hidden bg-linear-to-br from-[#0f172a] to-[#062f4a] text-white"
+      id="keycap-changer"
     >
 
       <svg className="pointer-events-none absolute top-0 left-0 h-auto w-full mix-blend-overlay" viewBox="0 0 75 100">
@@ -111,6 +113,7 @@ const ColorChanger: FC<ColorChangerProps> = ({ slice }) => {
             <li key={texture.id}>
               <button
                 onClick={() => handleTextureSelect(texture)}
+                disabled={isAnimating}
                 className={clsx("flex aspect-square flex-col justify-center rounded-lg border-2 p-4 hover:scale-105 motion-safe:transition-transform-all motion-safe:duration-300",
                   selectedTextureId == texture.id ? "border-[#81bfed] bg-[#81bfed]/20" : "cursor-pointer border-gray-300 hover:border-gray-500",
                   isAnimating && "cursor-not-allowed opacity-50"
